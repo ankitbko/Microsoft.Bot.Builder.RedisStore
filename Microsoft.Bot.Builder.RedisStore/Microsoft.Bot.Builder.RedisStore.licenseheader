@@ -1,0 +1,13 @@
+﻿extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+// Copyright (c) 2016 Ankit Sinha
+extensions: .aspx .ascx
+<%-- 
+Copyright (c) 2016 Ankit Sinha
+--%>
+extensions: .vb
+'Sample license text.
+extensions:  .xml .config .xsd
+<!--
+Sample license text.
+-->

@@ -2,6 +2,14 @@
 Redis Store for state sotrage in Microsoft Bot Framework
 I have written a blog post explaining this source - https://ankitbko.github.io/2016/10/Microsoft-Bot-Framework-Use-Redis-to-store-conversation-state/
 
+## Installation
+
+RedisStore can be installed via the nuget UI (as [Microsoft.Bot.Builder.RedisStore](https://www.nuget.org/packages/Microsoft.Bot.Builder.RedisStore)), or via the nuget package manager console:
+
+```PowerShell
+PM> Install-Package Microsoft.Bot.Builder.RedisStore
+```
+
 ## Usage
 Update the autofac registration as given below. I have used StackExchange.Redis as client, therefore follow their way of defining connection string. `RedisStoreOptions.Configuration` will be used as it is for creating `ConnectionMultiplexer`.
 

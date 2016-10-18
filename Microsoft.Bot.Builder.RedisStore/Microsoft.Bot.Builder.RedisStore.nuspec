@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Ankit Sinha</authors>
+    <owners>Ankit Sinha</owners>
+    <licenseUrl>https://github.com/ankitbko/Microsoft.Bot.Builder.RedisStore/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ankitbko/Microsoft.Bot.Builder.RedisStore</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Use Redis to store conversation state in Microsoft Bot Framework</description>
+    <releaseNotes>Initial release of RedisStore.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Redis Bot BotFramework</tags>
+  </metadata>
+</package>

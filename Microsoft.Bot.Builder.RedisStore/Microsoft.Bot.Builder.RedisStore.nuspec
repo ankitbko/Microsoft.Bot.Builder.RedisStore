@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/ankitbko/Microsoft.Bot.Builder.RedisStore</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Use Redis to store conversation state in Microsoft Bot Framework</description>
-    <releaseNotes>Initial release of RedisStore.</releaseNotes>
+    <releaseNotes>Updated to support Microsoft.Bot.Builder v 3.3.0</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Redis Bot BotFramework</tags>
   </metadata>

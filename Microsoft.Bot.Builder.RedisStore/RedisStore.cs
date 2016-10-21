@@ -53,12 +53,12 @@ namespace Microsoft.Bot.Builder.Dialogs.Internals
             }
         }
 
-        public Task<bool> FlushAsync(BotDataKey key, CancellationToken cancellationToken)
+        Task<bool> IBotDataStore<BotData>.FlushAsync(IAddress key, CancellationToken cancellationToken)
         {
             return Task.FromResult(true);
         }
 
-        public async Task<BotData> LoadAsync(BotDataKey key, BotStoreType botStoreType, CancellationToken cancellationToken)
+        async Task<BotData> IBotDataStore<BotData>.LoadAsync(IAddress key, BotStoreType botStoreType, CancellationToken cancellationToken)
         {
             Connect();
 
@@ -76,7 +76,7 @@ namespace Microsoft.Bot.Builder.Dialogs.Internals
             return botData;
         }
 
-        public async Task SaveAsync(BotDataKey key, BotStoreType botStoreType, BotData data, CancellationToken cancellationToken)
+        async Task IBotDataStore<BotData>.SaveAsync(IAddress key, BotStoreType botStoreType, BotData data, CancellationToken cancellationToken)
         {
             Connect();
 
@@ -99,7 +99,7 @@ namespace Microsoft.Bot.Builder.Dialogs.Internals
                 throw new ConcurrencyException("Inconsistent SaveAsync based on ETag!");
         }
 
-        private string GetKey(BotDataKey key, BotStoreType botStoreType)
+        private string GetKey(IAddress key, BotStoreType botStoreType)
         {
             switch (botStoreType)
             {

@@ -27,22 +27,12 @@ namespace Microsoft.Bot.Sample.PizzaBot
 
             RedisStoreOptions redisOptions = new RedisStoreOptions()
             {
-                Configuration = "localhost"
-            };
+				Configuration = "localhost"
+			};
 
-            builder.Register(c => new RedisStore(redisOptions))
-               .As<RedisStore>()
-               .SingleInstance();
+			RedisBotCache.Configure(redisOptions);
 
-            builder.Register(c => new CachingBotDataStore(c.Resolve<RedisStore>(),
-                                                          CachingBotDataStoreConsistencyPolicy.ETagBasedConsistency))
-                .As<IBotDataStore<BotData>>()
-                .AsSelf()
-                .InstancePerLifetimeScope();
-
-            builder.Update(Conversation.Container);
-
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(Conversation.Container));
+			DependencyResolver.SetResolver(new AutofacDependencyResolver(Conversation.Container));
         }
     }
 }

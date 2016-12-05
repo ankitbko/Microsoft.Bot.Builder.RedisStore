@@ -156,6 +156,7 @@ namespace Microsoft.Bot.Builder.Dialogs.Internals
 			{
 				var serializedJSon = JsonConvert.SerializeObject(data);
 				streamWriter.Write(serializedJSon);
+				streamWriter.Flush();
 				return cmpStream.ToArray();
 			}
 		}

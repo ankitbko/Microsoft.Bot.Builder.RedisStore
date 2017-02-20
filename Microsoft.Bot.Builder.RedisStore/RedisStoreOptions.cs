@@ -23,7 +23,7 @@
 namespace Microsoft.Bot.Builder.Dialogs.Internals
 {
     /// <summary>
-    /// Configuration options for <see cref="RedisStore"/>.
+    /// Configuration options for <see cref="RedisBotDataStore"/>.
     /// </summary>
     public class RedisStoreOptions
     {
